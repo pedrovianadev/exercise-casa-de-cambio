@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const searchButton = document.querySelector('.search-btn');
 
 const coinInput = document.querySelector('#coin-input');
@@ -8,7 +10,12 @@ function fetchAPI(coin){
     const url = `https://api.exchangerate.host/latest?base=${coin}`;
     return fetch(url)
     .then((response) => response.json())
-    .then((data) => data.rates)
+    .then((data) => {
+        if(data.base !== coin.toUpperCase()){
+            throw new Error('Moeda não existente!')
+        }
+        return data.rates;
+    })
 }
 
 function renderCoins(coins){
@@ -30,9 +37,25 @@ function renderCoins(coins){
 
 function handleSearch(){
     const coin = coinInput.value;
+    console.log(coin);
+
+    if(!coin){
+        return Swal.fire({
+            icon: 'error',
+            title: 'Opsss...',
+            text: 'Você precisa digitar uma moeda'
+        })
+    }
 
     fetchAPI(coin)
     .then(renderCoins)
+    .catch((error) => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Opsss...',
+            text: error.message
+        })
+    })
 }
 
 searchButton.addEventListener('click', handleSearch);
