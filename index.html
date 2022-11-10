@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
-    <title>Document</title>
+    <!-- <link rel="stylesheet" href="src/style.css"> -->
+    <title>Casa de Câmbio</title>
 </head>
 <body>
-    <main>
-        <section>
-            <h1 id="title">Casa de Câmbio</h1>
-            <label for="search" id="label">Digite a moeda:</label><br>
-            <input type="text" name="" id="search" placeholder="USD">
-            <button id="button">Pesquisar</button>
-            <div id="container">
-                
-            </div>
-        </section>
-    </main>
+    <h1>Casa de Câmbio</h1>
+    <label for="coin-input">
+        Digite a moeda:
+        <input id="coin-input" placeholder="USD">
+    </label>
+    <button class="search-btn">Pesquisar</button>
+    
+    <section>
+        <h2 class="coins-title"></h2>
+        <ul class="coins">
+            
+        </ul>
+    </section>
     <script type="module" src="./src/main.js"></script>
 </body>
 </html>
