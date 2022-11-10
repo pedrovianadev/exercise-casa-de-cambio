@@ -1,7 +1,6 @@
 {
   "name": "exercise-casa-de-cambio",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "vite --open"
@@ -23,5 +22,6 @@
   },
   "devDependencies": {
     "eslint": "^8.27.0"
-  }
+  },
+  "description": ""
 }
