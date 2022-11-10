@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
     <title>Document</title>
 </head>
 <body>
-  <main>
-    <header>
-        <h1>Casa de Câmbio</h1>
-    </header>
-    <section>
-      <label>Digite a moeda:</label> <br>
-      <input value="" placeholder="USD" type="text">
-      <button id="searchButton">Pesquisar</button>
-      <div id="container"></div>
-    </section>
-  </main>
-  <script type="module" src="./src/main.js"></script>
+    <main>
+        <section>
+            <h1 id="title">Casa de Câmbio</h1>
+            <label for="search" id="label">Digite a moeda:</label><br>
+            <input type="text" name="" id="search" placeholder="USD">
+            <button id="button">Pesquisar</button>
+            <div id="container">
+                
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
 </body>
 </html>
